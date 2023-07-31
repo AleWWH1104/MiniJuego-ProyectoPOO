@@ -15,8 +15,8 @@ public class agua extends Actor
     GreenfootImage image = getImage();
     widthOriginal = image.getWidth();
     heightOriginal = image.getHeight();
-    int nuevoAncho = 190; 
-    int nuevoAlto = 100; 
+    int nuevoAncho = 100; 
+    int nuevoAlto = 50; 
     image.scale(nuevoAncho, nuevoAlto);
     
     }
