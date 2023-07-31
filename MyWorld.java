@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    
+    public int puntos; //Lleva la cantidad de puntos
+    public contadorMonedas etiquetaPuntos;  //Sirve para mostrar la cantidad de puntos
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -24,9 +26,13 @@ public class MyWorld extends World
         //Agua
         addObject(new agua(), 410, 360);
         //Serpiente
-        addObject(new snake(), 490, 40);
+        addObject(new snake(), 540, 5);
         //Cohete
         addObject(new cohete(), 0, 200);
         
+        puntos = 0;
+        etiquetaPuntos = new contadorMonedas("Monedas: "+"" + puntos, 25, Color.BLACK);
+        addObject(etiquetaPuntos, 60, 20);
     }
+    
 }

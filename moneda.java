@@ -23,5 +23,15 @@ public class moneda extends Actor
     public void act()
     {
         // Add your action code here.
+        monedaAgarrada();
+    }
+    
+    public void monedaAgarrada(){
+        if (isTouching(Purple.class)){
+            MyWorld miMundo = (MyWorld) getWorld();
+            miMundo.puntos++;  //Incremento los puntos
+            miMundo.etiquetaPuntos.actualizarCM("" + miMundo.puntos);  //Actualizo la imagen
+            miMundo.removeObject(this); //Elimino al arbol que esta siendo llamado
+        }
     }
 }
