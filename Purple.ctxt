@@ -10,4 +10,6 @@ comment4.params=
 comment4.target=void\ resetGame()
 comment5.params=
 comment5.target=void\ validarColisionPerder()
-numComments=6
+comment6.params=
+comment6.target=void\ escaleraUpDown()
+numComments=7

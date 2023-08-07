@@ -30,6 +30,14 @@ public class MyWorld extends World
         //Cohete
         addObject(new cohete(), 0, 200);
         
+        addObject(new pruebaEscalera(), 524, 285);
+        
+        addObject(new pruebaEscalera(), 247, 265);
+        addObject(new pruebaEscalera(), 247, 205);
+        
+        addObject(new pruebaEscalera(), 463, 160);
+        addObject(new pruebaEscalera(), 463, 110);
+        
         puntos = 0;
         etiquetaPuntos = new contadorMonedas("Monedas: "+"" + puntos, 25, Color.BLACK);
         addObject(etiquetaPuntos, 60, 20);
