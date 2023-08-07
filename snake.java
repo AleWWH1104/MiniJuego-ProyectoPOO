@@ -12,6 +12,18 @@ public class snake extends Actor
      * Act - do whatever the snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int widthOriginal;
+    private int heightOriginal;
+    public snake(){
+    //Tamano del objeto
+    GreenfootImage image = getImage();
+    widthOriginal = image.getWidth();
+    heightOriginal = image.getHeight();
+    int nuevoAncho = 35; 
+    int nuevoAlto = 50; 
+    image.scale(nuevoAncho, nuevoAlto);
+    
+    }
     public void act()
     {
         // Add your action code here.

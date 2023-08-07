@@ -15,8 +15,8 @@ public class moneda extends Actor
     GreenfootImage image = getImage();
     widthOriginal = image.getWidth();
     heightOriginal = image.getHeight();
-    int nuevoAncho = 50; 
-    int nuevoAlto = 50; 
+    int nuevoAncho = 30; 
+    int nuevoAlto = 30; 
     image.scale(nuevoAncho, nuevoAlto);
     
     }

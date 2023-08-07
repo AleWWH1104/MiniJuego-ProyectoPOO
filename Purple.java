@@ -10,8 +10,8 @@ public class Purple extends Actor
     GreenfootImage image = getImage();
     widthOriginal = image.getWidth();
     heightOriginal = image.getHeight();
-    int nuevoAncho = 60; 
-    int nuevoAlto = 75; 
+    int nuevoAncho = 50; 
+    int nuevoAlto = 65; 
     image.scale(nuevoAncho, nuevoAlto);
     
     }

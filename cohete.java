@@ -12,6 +12,19 @@ public class cohete extends Actor
      * Act - do whatever the cohete wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int widthOriginal;
+    private int heightOriginal;
+    public cohete(){
+    //Tamano del objeto
+    GreenfootImage image = getImage();
+    widthOriginal = image.getWidth();
+    heightOriginal = image.getHeight();
+    int nuevoAncho = 70; 
+    int nuevoAlto = 40; 
+    image.scale(nuevoAncho, nuevoAlto);
+    
+    }
+    
     private int desplazamiento = 0; // var entera incrementa al llamar el metodo act
     private int rotation = 0;
     
