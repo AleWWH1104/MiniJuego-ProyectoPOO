@@ -9,8 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     
-    public int puntos; //Lleva la cantidad de puntos
-    public contadorMonedas etiquetaPuntos;  //Sirve para mostrar la cantidad de puntos
+    public int puntosM; //Lleva la cantidad de puntos
+    public contadorMonedas etiquetaPuntosM;  //Sirve para mostrar la cantidad de puntos
+    
+    public int puntosE; //Lleva la cantidad de puntos
+    public contadorEstrellas etiquetaPuntosE;
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -43,9 +47,15 @@ public class MyWorld extends World
         addObject(new puente(), 370, 270);
         addObject(new puente(), 192, 330);
         
-        puntos = 0;
-        etiquetaPuntos = new contadorMonedas("Monedas: "+"" + puntos, 25, Color.BLACK);
-        addObject(etiquetaPuntos, 60, 20);
+        // Monedas
+        puntosM = 0;
+        etiquetaPuntosM = new contadorMonedas("Monedas: "+"" + puntosM, 25, Color.BLACK);
+        addObject(etiquetaPuntosM, 60, 20);
+        
+        //Estrellas
+        puntosE = 0;
+        etiquetaPuntosE = new contadorEstrellas("Estrellas: "+"" + puntosE, 25, Color.BLACK);
+        addObject(etiquetaPuntosE, 60, 50);
     }
     
 }
