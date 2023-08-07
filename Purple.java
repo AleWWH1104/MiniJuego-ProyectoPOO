@@ -52,7 +52,7 @@ public class Purple extends Actor
         }
     }
     public void escaleraUpDown(){
-        if(isTouching(pruebaEscalera.class)){
+        if(isTouching(pruebaEscalera.class) || isTouching(puente.class)){
             if (Greenfoot.isKeyDown("up")) {
             setLocation(getX(), getY() - velocidad);
             }

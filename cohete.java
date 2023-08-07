@@ -31,12 +31,12 @@ public class cohete extends Actor
     public void act()
     {
         desplazamiento = desplazamiento + 1; //incremento var 1 en 1
-        if (desplazamiento >= 100){ // condicion si 
+        if (desplazamiento >= 150){ // condicion si 
             rotation = rotation + 180;
             rotation = rotation % 360;
             desplazamiento = 0;
             setRotation(rotation);
         }
-        move(5);
+        move(4);
     }
 }
