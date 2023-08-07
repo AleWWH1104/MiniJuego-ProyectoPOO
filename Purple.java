@@ -1,7 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Purple extends Actor
-{
+public class Purple extends Actor{
+
+    
     private int widthOriginal;
     private int heightOriginal;
     public int velocidad = 4; // Ajusta la velocidad de movimiento según lo desees
@@ -14,6 +15,7 @@ public class Purple extends Actor
     int nuevoAncho = 50; 
     int nuevoAlto = 65; 
     image.scale(nuevoAncho, nuevoAlto);
+
     
     }
 

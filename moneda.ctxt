@@ -1,10 +1,15 @@
 #BlueJ class context
 comment0.target=moneda
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ moneda\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=moneda()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ monedaAgarrada()
-numComments=4
+comment4.params=miMundo
+comment4.target=void\ ganarEstrellas(MyWorld)
+comment5.params=map
+comment5.target=java.lang.String\ getRandomKey(java.util.HashMap)
+comment6.params=mensaje
+comment6.target=java.lang.String\ obtenerEntrada(java.lang.String)
+numComments=7

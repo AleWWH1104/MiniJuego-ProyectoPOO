@@ -38,7 +38,7 @@ public class MyWorld extends World
         addObject(new pruebaEscalera(), 524, 285);
         
         addObject(new pruebaEscalera(), 247, 265);
-        addObject(new pruebaEscalera(), 247, 205);
+        addObject(new pruebaEscalera(), 247, 200);
         
         addObject(new pruebaEscalera(), 463, 160);
         addObject(new pruebaEscalera(), 463, 110);

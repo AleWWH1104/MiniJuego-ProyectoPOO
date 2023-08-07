@@ -29,6 +29,7 @@ public class contadorMonedas extends Actor
         // Add your action code here.
         
     }
+    
     public void actualizarCM(String texto) {
         GreenfootImage imagen = new GreenfootImage(texto, tamañoFuente, colorTexto, null);
         setImage(imagen);

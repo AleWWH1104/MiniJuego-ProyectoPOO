@@ -20,7 +20,7 @@ public class contadorEstrellas extends Actor
         this.texto = texto;
         this.tamañoFuente = tamañoFuente;
         this.colorTexto = colorTexto;
-        actualizarCM(texto);
+        actualizarCME(texto);
     }
     
     public void act()
@@ -28,9 +28,11 @@ public class contadorEstrellas extends Actor
         // Add your action code here.
         
     }
-    public void actualizarCM(String texto) {
+    public void actualizarCME(String texto) {
         GreenfootImage imagen = new GreenfootImage(texto, tamañoFuente, colorTexto, null);
         setImage(imagen);
     }
+    
+    
     
 }
