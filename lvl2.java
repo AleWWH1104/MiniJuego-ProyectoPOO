@@ -6,8 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class lvl2 extends World
-{
+public class lvl2 extends World{
+    
 
     public int puntosM; //Lleva la cantidad de puntos
     public contadorMonedas etiquetaPuntosM;  //Sirve para mostrar la cantidad de puntos
@@ -21,7 +21,12 @@ public class lvl2 extends World
     public lvl2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1);
+        // Crear e inicializar las etiquetas
+        etiquetaPuntosM = new contadorMonedas("Monedas: " + puntosM, 25, Color.WHITE);
+        addObject(etiquetaPuntosM, 500, 20);
+        etiquetaPuntosE = new contadorEstrellas("Estrellas: " + puntosE, 25, Color.WHITE);
+        addObject(etiquetaPuntosE, 500, 50);
         
         // plataformas de roca
         addObject(new roca(), 330, 380);

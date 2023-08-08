@@ -38,19 +38,23 @@ public class moneda extends Actor{
         monedaAgarrada();
     }
     
-    public void monedaAgarrada(){
-        if (isTouching(Purple.class)){
-            World miMundo = getWorld(); // Cambio aquí, ahora usamos World en lugar de MyWorld
+    public void monedaAgarrada() {
+        if (isTouching(Purple.class)) {
+            World miMundo = getWorld();
             if (miMundo instanceof MyWorld) {
                 MyWorld myWorld = (MyWorld) miMundo;
-                myWorld.puntosM++;
-                myWorld.etiquetaPuntosM.actualizarCM("Monedas: " + myWorld.puntosM);
+                if (myWorld.etiquetaPuntosM != null) {
+                    myWorld.puntosM++;
+                    myWorld.etiquetaPuntosM.actualizarCM("Monedas: " + myWorld.puntosM);
+                }
                 myWorld.removeObject(this);
                 ganarEstrellas(myWorld);
             } else if (miMundo instanceof lvl2) {
                 lvl2 level2 = (lvl2) miMundo;
-                level2.puntosM++;
-                level2.etiquetaPuntosM.actualizarCM("Monedas: " + level2.puntosM);
+                if (level2.etiquetaPuntosM != null) {
+                    level2.puntosM++;
+                    level2.etiquetaPuntosM.actualizarCM("Monedas: " + level2.puntosM);
+                }
                 level2.removeObject(this);
                 ganarEstrellaslvl2(level2);
             }
@@ -85,8 +89,8 @@ public class moneda extends Actor{
         
     }
     public void ganarEstrellaslvl2(lvl2 miMundo){
+        lvl2 level2 = miMundo;
         if (miMundo instanceof lvl2){
-            lvl2 level2 = (lvl2) miMundo;
             
             // Obtener una pregunta aleatoria del HashMap
             String preguntaAleatoria = getRandomKey(preguntasYRespuestas);
