@@ -49,7 +49,7 @@ public class Purple extends Actor{
         Greenfoot.setWorld(new MyWorld());
     }
     public void validarColisionPerder(){
-        if (isTouching(snake.class) || isTouching(cohete.class) || isTouching(agua.class)) {
+        if (isTouching(snake.class) || isTouching(cohete.class) || isTouching(agua.class)|| isTouching(bolaFuego.class)) {
             resetGame(); 
         }
     }

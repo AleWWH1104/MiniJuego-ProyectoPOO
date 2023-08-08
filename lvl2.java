@@ -14,10 +14,13 @@ public class lvl2 extends World{
     
     public int puntosE; //Lleva la cantidad de puntos
     public contadorEstrellas etiquetaPuntosE;
-    /**
-     * Constructor for objects of class lvl2.
-     * 
-     */
+    
+    private Purple protagonista;
+    private dragon miEnemigo;
+    public Purple getProtagonista(){
+        return protagonista;
+    }
+    
     public lvl2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -56,6 +59,7 @@ public class lvl2 extends World{
         addObject(new dragon(), 70, 70);
         
         // purple
-        addObject(new Purple(), 340, 315);
+        protagonista = new Purple();
+        addObject(protagonista, 340, 315);
     }
 }

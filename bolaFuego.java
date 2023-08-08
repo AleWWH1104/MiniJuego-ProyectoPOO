@@ -15,6 +15,9 @@ public class bolaFuego extends Actor
     private int widthOriginal;
     private int heightOriginal;
     
+    private int desplazamiento = 0; // var entera incrementa al llamar el metodo act
+    private int rotation = -45;
+    
     public bolaFuego(){
         GreenfootImage image = getImage();
         widthOriginal = image.getWidth();
@@ -23,7 +26,18 @@ public class bolaFuego extends Actor
         int nuevoAlto = 30; 
         image.scale(nuevoAncho, nuevoAlto);
     }
+    public void act()
     {
         // Add your action code here.
+        desplazamiento = desplazamiento + 4; //incremento var 1 en 1
+        setRotation(rotation);
+        if(desplazamiento >= 300){
+            rotation = rotation + 180;
+            rotation = rotation % 360;
+            desplazamiento = 0;
+            setRotation(rotation);
+        }
+        move(8);
+        //setRotation(90);
     }
 }
