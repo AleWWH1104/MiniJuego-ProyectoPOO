@@ -49,6 +49,18 @@ public class moneda extends Actor{
                 }
                 myWorld.removeObject(this);
                 ganarEstrellas(myWorld);
+                
+                // Verificar si se debe pasar al nivel 2
+                if (myWorld.puntosM == 5) {
+                    if (myWorld.puntosE == myWorld.puntosM){
+                        Greenfoot.setWorld(new lvl2());
+                    }else{
+                        System.out.println("No has ganado las estrellas requeridas para pasar al Nivel 2");
+                        Greenfoot.delay(2);
+                        Greenfoot.setWorld(new MyWorld());
+                    }
+                    
+                }
             } else if (miMundo instanceof lvl2) {
                 lvl2 level2 = (lvl2) miMundo;
                 if (level2.etiquetaPuntosM != null) {
@@ -57,8 +69,22 @@ public class moneda extends Actor{
                 }
                 level2.removeObject(this);
                 ganarEstrellaslvl2(level2);
+                
+                // Verificar si ganó
+                if (level2.puntosM == 5) {
+                    if (level2.puntosE == level2.puntosM){
+                        System.out.println("¡Has Ganado!");
+                        Greenfoot.delay(2);
+                    }else{
+                        System.out.println("No has ganado las estrellas requeridas para pasar al Nivel 2");
+                        Greenfoot.delay(5);
+                        Greenfoot.setWorld(new MyWorld());
+                    }
+                    
+                }
             }
         }
+        
     }
     
     
