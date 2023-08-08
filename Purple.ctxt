@@ -12,4 +12,6 @@ comment5.params=
 comment5.target=void\ validarColisionPerder()
 comment6.params=
 comment6.target=void\ escaleraUpDown()
-numComments=7
+comment7.params=
+comment7.target=void\ lanzarPorCanon()
+numComments=8

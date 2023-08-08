@@ -24,6 +24,7 @@ public class Purple extends Actor{
         checkKeyPress();
         validarColisionPerder();
         escaleraUpDown();
+        lanzarPorCanon();
     }
     
      public void checkKeyPress() {
@@ -49,7 +50,7 @@ public class Purple extends Actor{
         Greenfoot.setWorld(new MyWorld());
     }
     public void validarColisionPerder(){
-        if (isTouching(snake.class) || isTouching(cohete.class) || isTouching(agua.class)|| isTouching(bolaFuego.class)) {
+        if (isTouching(snake.class) || isTouching(cohete.class) || isTouching(agua.class)|| isTouching(bolaFuego.class) || isTouching(dragon.class)) {
             resetGame(); 
         }
     }
@@ -61,6 +62,11 @@ public class Purple extends Actor{
             if (Greenfoot.isKeyDown("down")) {
                 setLocation(getX(), getY() + velocidad);
             }
+        }
+    }
+    public void lanzarPorCanon(){
+        if (isTouching(canon.class)){
+            this.setLocation(270,70);
         }
     }
 }

@@ -19,8 +19,8 @@ public class dragon extends Actor
         GreenfootImage image = getImage();
         widthOriginal = image.getWidth();
         heightOriginal = image.getHeight();
-        int nuevoAncho = 120; 
-        int nuevoAlto = 120; 
+        int nuevoAncho = 110; 
+        int nuevoAlto = 110; 
         image.scale(nuevoAncho, nuevoAlto);
     }
     
