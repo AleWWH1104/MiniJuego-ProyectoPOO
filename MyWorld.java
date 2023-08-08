@@ -15,10 +15,20 @@ public class MyWorld extends World
     public int puntosE; //Lleva la cantidad de puntos
     public contadorEstrellas etiquetaPuntosE;
     
+    boolean templvl2 = true;
+    
+    private GreenfootSound music;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        
+        if (templvl2 == true){
+            Greenfoot.setWorld(new lvl2());
+        }
+        //music = new GreenfootSound("https://drive.google.com/file/d/1RHgfsFarAeI4n6p7Du4JWlJjN8LOPwGr/view?usp=sharing"); // Reemplaza con la URL del enlace de la canción
+        //music.play(); // Iniciar la reproducción de la música
+        
         //Personaje
         addObject(new Purple(), 560, 300);
         //Monedas
