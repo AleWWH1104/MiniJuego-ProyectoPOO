@@ -54,6 +54,7 @@ public class moneda extends Actor{
                 if (myWorld.puntosM == 5) {
                     if (myWorld.puntosE == myWorld.puntosM){
                         Greenfoot.setWorld(new lvl2());
+                        myWorld.music.stop();
                     }else{
                         System.out.println("No has ganado las estrellas requeridas para pasar al Nivel 2");
                         Greenfoot.delay(2);
