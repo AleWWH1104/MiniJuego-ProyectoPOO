@@ -46,8 +46,12 @@ public class Purple extends Actor{
         }
     private void resetGame()
     {
+        World miMundo = getWorld();
+        MyWorld myWorld = (MyWorld) miMundo;
+        myWorld.music.stop();
         // Reinicia todo el escenario aquí
         Greenfoot.setWorld(new MyWorld());
+        
     }
     public void validarColisionPerder(){
         if (isTouching(snake.class) || isTouching(cohete.class) || isTouching(agua.class)|| isTouching(bolaFuego.class) || isTouching(dragon.class)) {
