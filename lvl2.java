@@ -63,3 +63,4 @@ public class lvl2 extends World{
         addObject(protagonista, 340, 315);
     }
 }
+
